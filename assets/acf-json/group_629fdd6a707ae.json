@@ -1,0 +1,128 @@
+{
+    "key": "group_629fdd6a707ae",
+    "title": "Taxonomies",
+    "fields": [
+        {
+            "key": "field_629fdd757fdfe",
+            "label": "Select post types to add",
+            "name": "post_types",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "wine": "Wines",
+                "recipe": "Recipes",
+                "cocktail": "Cocktails",
+                "other": "Other(s)"
+            },
+            "allow_custom": 0,
+            "default_value": [
+                "wines"
+            ],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_62a0cf573457f",
+            "label": "Add Custom Post Type(s)",
+            "name": "custom_post_types",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Plural field is only needed if the custom post type has an irregular plural, eg whiskey -> whiskies<br \/>\r\n\r\nCustom post type icons can be customized in admin.css",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629fdd757fdfe",
+                        "operator": "==",
+                        "value": "other"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_62a0ce9fc8cde",
+                    "label": "Singular Name",
+                    "name": "singular",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_62a0cf573457f"
+                },
+                {
+                    "key": "field_62a0cea9c8cdf",
+                    "label": "Plural Name",
+                    "name": "plural",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_62a0cf573457f"
+                }
+            ],
+            "rows_per_page": 20
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-settings"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1749602292
+}
