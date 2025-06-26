@@ -1,4 +1,9 @@
 <?php 
+  /*
+  * Template Name: All Wines
+  * description: >-
+    Page template for all wines page
+  */
   get_header(); 
 ?>
 
